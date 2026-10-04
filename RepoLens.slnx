@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RepoLens.Api/RepoLens.Api.csproj" />
+    <Project Path="src/RepoLens.Application/RepoLens.Application.csproj" />
+    <Project Path="src/RepoLens.Domain/RepoLens.Domain.csproj" />
+    <Project Path="src/RepoLens.Infrastructure/RepoLens.Infrastructure.csproj" />
+    <Project Path="src/RepoLens.Worker/RepoLens.Worker.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/RepoLens.IntegrationTests/RepoLens.IntegrationTests.csproj" />
+    <Project Path="tests/RepoLens.UnitTests/RepoLens.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/RepoLens.DevMongo/RepoLens.DevMongo.csproj" />
+  </Folder>
+</Solution>

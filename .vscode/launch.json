@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API (Swagger)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/RepoLens.Api/bin/Debug/net10.0/RepoLens.Api.dll",
+      "cwd": "${workspaceFolder}/src/RepoLens.Api",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:7180;http://localhost:5180"
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https://\\S+)",
+        "uriFormat": "%s/swagger"
+      },
+      "stopAtEntry": false
+    },
+    {
+      "name": "Worker (Service Bus)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/RepoLens.Worker/bin/Debug/net10.0/RepoLens.Worker.dll",
+      "cwd": "${workspaceFolder}/src/RepoLens.Worker",
+      "env": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "DevMongo (local MongoDB)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/tools/RepoLens.DevMongo/bin/Debug/net10.0/RepoLens.DevMongo.dll",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

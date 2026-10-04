@@ -1,0 +1,14 @@
+**/bin/
+**/obj/
+**/TestResults/
+.data/
+.git/
+.vs/
+.vscode/
+.idea/
+tests/
+tools/
+docs/
+deploy/
+**/*.user
+**/appsettings.*.local.json

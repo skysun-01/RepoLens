@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>RepoLens.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RepoLens.Domain\RepoLens.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Microsoft.Extensions.AI is the provider-neutral abstraction (IChatClient, IEmbeddingGenerator);
+         the concrete OpenAI / Azure OpenAI clients are wired up in Infrastructure. -->
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+    <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="RepoLens.UnitTests" />
+  </ItemGroup>
+
+</Project>

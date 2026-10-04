@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>RepoLens.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Persistence sets the optimistic-concurrency version; tests assert on it. -->
+    <InternalsVisibleTo Include="RepoLens.Infrastructure" />
+    <InternalsVisibleTo Include="RepoLens.UnitTests" />
+  </ItemGroup>
+
+</Project>
